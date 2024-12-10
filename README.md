@@ -68,9 +68,9 @@ Install the following Python packages:
 - **Channels Publishing in 2022**:
   Lists channels that uploaded videos in 2022.
 
-  # How the code works
+## How the code works
 
-## 1. **YouTube Data Retrieval**
+### 1. **YouTube Data Retrieval**
 - **API Configuration**: The YouTube Data API is initialized using an API key to interact with YouTube's data.
 - **Functions for Data Fetching**:
   - `channel_data(ch_id)`: Retrieves channel details like name, description, subscriber count, and total views for a given channel ID.
@@ -79,13 +79,13 @@ Install the following Python packages:
   - `get_comment_ids(vd_id)`: Retrieves comment IDs for a video.
   - `comment_data(cm_id)`: Fetches comment details such as author name, comment text, and publish date.
 
-## 2. **Streamlit Web Interface**
+### 2. **Streamlit Web Interface**
 - **Page 1**: Allows users to input a channel ID and displays:
   - Channel name and description.
   - Total views, subscriber count, and publication date.
 - **Page 2**: Enables interaction with pre-defined queries through a dropdown menu to explore the stored data.
 
-## 3. **Data Processing with pandas**
+### 3. **Data Processing with pandas**
 - **DataFrames**: 
   - The project uses `pandas` to create, manipulate, and process data for channels, videos, and comments.
   - Separate DataFrames (`channel_df`, `video_df`, `comment_df`) store the respective data before it is saved to the database.
@@ -96,7 +96,7 @@ Install the following Python packages:
 - **Batch Inserts**:
   - `pandas` DataFrames are used to prepare data for batch inserts into MySQL tables, optimizing database storage.
 
-## 4. **Database Storage**
+### 4. **Database Storage**
 - **Database Connection**: Connects to a MySQL database named `CA_P1`.
 - **Database Schema**:
   - `channel_info`: Stores channel-related metadata.
@@ -106,7 +106,7 @@ Install the following Python packages:
   - Cleaned and structured data from `pandas` DataFrames is stored in MySQL tables.
   - Data includes channel stats, video metadata, and user comments.
 
-## 5. **Pre-defined Query Options**
+### 5. **Pre-defined Query Options**
 Users can select queries from a dropdown menu, including:
 - Names of all videos and their corresponding channels.
 - Channels with the most videos.
@@ -115,7 +115,7 @@ Users can select queries from a dropdown menu, including:
 - Channels publishing videos in a specific year (e.g., 2022).
 - Average video duration per channel.
 
-## 6. **Data Transformation**
+### 6. **Data Transformation**
 - Video durations are converted to seconds using `pandas` and regular expressions for consistent storage and analysis.
 - Comments and statistics are processed to ensure structured storage.
 - DataFrames allow seamless integration between raw API responses and MySQL storage.

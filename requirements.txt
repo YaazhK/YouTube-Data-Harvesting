@@ -1,0 +1,4 @@
+streamlit
+google-api-python-client
+mysql-connector-python
+pandas

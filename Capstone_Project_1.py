@@ -5,7 +5,7 @@ from datetime import datetime
 
 api_service_name = "youtube"
 api_version = "v3"
-api_key = #enter your api key
+api_key = st.secrets["api_key"]
 youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey=api_key)
 
 def channel_data(ch_id):

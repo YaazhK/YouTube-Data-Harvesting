@@ -1,4 +1,3 @@
-pip install google-api-python-client
 import streamlit as st
 import googleapiclient.discovery
 from googleapiclient.errors import HttpError
